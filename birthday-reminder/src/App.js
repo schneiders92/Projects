@@ -48,10 +48,13 @@ class App extends React.Component {
   }
   render(){
     return (
-      <div className="App">
-        <h2>reminder project setup</h2>
-        <List></List>
-      </div>
+      <main>
+        <section className='container'>
+          <h3>{this.state.data.length} birthday today</h3>
+          <List data={this.state.data}> </List>
+          <button onClick={()=>this.setState({data:[]})}>clear all</button>
+        </section>
+      </main>
     )
   }
   }
